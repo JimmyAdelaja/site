@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Automation & Test Engineer | Portfolio</title>
-  <meta name="description"
-    content="Personal website & portfolio of an Automation Engineer, specializing in test architecture, CI/CD, and quality engineering.">
-
-  <!-- Modern Font & Icons -->
+  <title>Oluwatobi Adelaja | Lead QA Automation & DevOps Engineer</title>
+  <meta name="description" content="Portfolio of Oluwatobi Adelaja - Lead QA Automation Engineer, DevOps Specialist, and Technical Support Engineer.">
+  
+  <!-- Modern Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
@@ -44,7 +40,7 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
     }
 
@@ -73,21 +69,29 @@
     }
 
     .tagline {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .contact-info {
+      font-family: var(--font-code);
+      font-size: 0.85rem;
       color: var(--text-muted);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
 
     .bio {
       color: var(--text-muted);
       font-size: 1.05rem;
-      max-width: 680px;
+      max-width: 720px;
     }
 
     /* Social Links */
     .links {
       display: flex;
-      gap: 1rem;
+      gap: 0.75rem;
       margin-top: 1.5rem;
       flex-wrap: wrap;
     }
@@ -96,7 +100,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.6rem 1.2rem;
+      padding: 0.6rem 1.1rem;
       border-radius: 6px;
       background: var(--bg-surface);
       color: var(--text-main);
@@ -119,7 +123,7 @@
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
@@ -138,7 +142,7 @@
     /* Skills Grid */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1rem;
     }
 
@@ -150,9 +154,11 @@
     }
 
     .skill-card h3 {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: var(--accent);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     .skill-tags {
@@ -170,22 +176,26 @@
       color: var(--text-muted);
     }
 
-    /* Experience Timeline */
-    .timeline {
+    /* Experience & Projects */
+    .timeline, .projects-grid {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
     }
 
-    .experience-item {
+    .card {
       background: var(--bg-surface);
       border: 1px solid var(--border);
       padding: 1.5rem;
       border-radius: 8px;
-      position: relative;
+      transition: border-color 0.2s ease;
     }
 
-    .exp-header {
+    .card:hover {
+      border-color: var(--accent);
+    }
+
+    .card-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -194,64 +204,44 @@
       margin-bottom: 0.75rem;
     }
 
-    .exp-title {
+    .card-title {
       font-weight: 600;
       font-size: 1.1rem;
     }
 
-    .exp-company {
+    .card-subtitle {
       color: var(--accent);
+      font-size: 0.95rem;
     }
 
-    .exp-date {
+    .card-date {
       font-size: 0.85rem;
       color: var(--text-muted);
       font-family: var(--font-code);
     }
 
-    .exp-details {
+    .card-details {
       list-style-type: disc;
       padding-left: 1.2rem;
       color: var(--text-muted);
       font-size: 0.95rem;
     }
 
-    .exp-details li {
+    .card-details li {
       margin-bottom: 0.4rem;
     }
 
-    /* Projects Grid */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+    .project-challenge {
+      margin-bottom: 0.75rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
     }
 
-    .project-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border);
-      padding: 1.5rem;
-      border-radius: 8px;
-      transition: border-color 0.2s ease;
-    }
-
-    .project-card:hover {
-      border-color: var(--accent);
-    }
-
-    .project-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+    /* Education */
+    .edu-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-
-    .project-desc {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
     }
 
     /* Footer */
@@ -265,150 +255,261 @@
     }
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .container {
-        padding: 0 0.5rem;
-      }
+      h1 { font-size: 2rem; }
+      .container { padding: 0 0.5rem; }
+      .card-header, .edu-item { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
-
 <body>
 
   <div class="container">
-
-    <!-- Hero / Intro -->
+    
+    <!-- Header / Intro -->
     <header>
-      <span class="badge"><i class="fa-solid fa-code-branch"></i> Open to Opportunities</span>
-      <h1>Your Name</h1>
-      <p class="tagline">Lead QA Automation Engineer & Quality Architect</p>
+      <span class="badge"><i class="fa-solid fa-code-branch"></i> Open to Remote Opportunities</span>
+      <h1>Oluwatobi Adelaja</h1>
+      <p class="tagline">Lead QA Automation Engineer | DevOps & Technical Support</p>
+      
+      <p class="contact-info">
+        <i class="fa-solid fa-phone"></i> +49 1521 4769677 / +233 595 654514 &nbsp;|&nbsp; 
+        <i class="fa-solid fa-location-dot"></i> Ghana / Remote
+      </p>
+
       <p class="bio">
-        Specializing in building robust end-to-end testing frameworks, CI/CD integrations, and automated infrastructure
-        for web, mobile, and API platforms. Passionate about scalable test architecture and developer efficiency.
+        Experienced Quality Architect and Software Engineer specializing in scalable automated testing frameworks, Linux server administration, hardware/software integration, and automated CI/CD deployment pipelines.
       </p>
 
       <div class="links">
-        <a href="https://github.com/yourusername" class="btn" target="_blank"><i class="fa-brands fa-github"></i>
-          GitHub</a>
-        <a href="https://linkedin.com/in/yourusername" class="btn" target="_blank"><i class="fa-brands fa-linkedin"></i>
-          LinkedIn</a>
-        <a href="mailto:your.email@example.com" class="btn"><i class="fa-solid fa-envelope"></i> Email</a>
-        <a href="#" class="btn"><i class="fa-solid fa-file-pdf"></i> Resume</a>
+        <a href="https://github.com/JimmyAdelaja" class="btn" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://linkedin.com/in/oluwatobi-adelaja" class="btn" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="mailto:jimmyadelaja@gmail.com" class="btn"><i class="fa-solid fa-envelope"></i> Email</a>
       </div>
     </header>
 
-    <!-- Core Toolkit -->
+    <!-- Technical Toolkit -->
     <section id="skills">
       <h2><i class="fa-solid fa-terminal"></i> Technical Toolkit</h2>
       <div class="skills-grid">
-
+        
         <div class="skill-card">
-          <h3>E2E & Web Automation</h3>
+          <h3>Automation & Testing</h3>
           <div class="skill-tags">
             <span class="tag">Playwright</span>
             <span class="tag">Selenium</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">Java</span>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <h3>Mobile & API</h3>
-          <div class="skill-tags">
             <span class="tag">Appium</span>
-            <span class="tag">REST Assured</span>
+            <span class="tag">Vaadin Testbench</span>
             <span class="tag">Postman</span>
+            <span class="tag">Apache JMeter</span>
+            <span class="tag">Testcontainers</span>
+            <span class="tag">SikuliX UI</span>
+            <span class="tag">UiAutomator2</span>
           </div>
         </div>
 
         <div class="skill-card">
           <h3>DevOps & Infrastructure</h3>
           <div class="skill-tags">
-            <span class="tag">GitHub Actions</span>
             <span class="tag">Docker</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">Ansible</span>
+            <span class="tag">Semaphore UI</span>
+            <span class="tag">Linux Admin</span>
             <span class="tag">Bash</span>
-            <span class="tag">CI/CD Pipelines</span>
+            <span class="tag">PowerShell</span>
+            <span class="tag">Google Cloud</span>
+            <span class="tag">Microsoft Azure</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Languages & Databases</h3>
+          <div class="skill-tags">
+            <span class="tag">Java</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Python</span>
+            <span class="tag">C#</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">SQL Server</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Observability & Support</h3>
+          <div class="skill-tags">
+            <span class="tag">Grafana</span>
+            <span class="tag">Loki</span>
+            <span class="tag">Prometheus</span>
+            <span class="tag">Telegraf</span>
+            <span class="tag">SharePoint Online</span>
+            <span class="tag">OneDrive Enterprise</span>
+            <span class="tag">WinAPI</span>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- Career Journey -->
-    <section id="experience">
-      <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
-      <div class="timeline">
-
-        <!-- Role Item (Duplicate this block for new roles) -->
-        <div class="experience-item">
-          <div class="exp-header">
-            <div>
-              <span class="exp-title">Lead QA Automation Engineer</span>
-              <span class="exp-company">@ Current Company</span>
-            </div>
-            <span class="exp-date">2024 — Present</span>
-          </div>
-          <ul class="exp-details">
-            <li>Designed and maintained scalable cross-platform automated test suites.</li>
-            <li>Integrated parallelized test runs into GitHub Actions pipelines, reducing build times significantly.
-            </li>
-            <li>Mentored incoming engineering talent and led QA automation onboarding initiatives.</li>
-          </ul>
-        </div>
-
-        <div class="experience-item">
-          <div class="exp-header">
-            <div>
-              <span class="exp-title">QA Automation Engineer</span>
-              <span class="exp-company">@ Previous Company</span>
-            </div>
-            <span class="exp-date">2022 — 2024</span>
-          </div>
-          <ul class="exp-details">
-            <li>Built core API and UI testing suites for enterprise web services.</li>
-            <li>Collaborated with product teams to embed automated testing into daily deployment cycles.</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Featured Projects & Frameworks -->
+    <!-- Key Featured Projects -->
     <section id="projects">
-      <h2><i class="fa-solid fa-cube"></i> Featured Projects</h2>
+      <h2><i class="fa-solid fa-cube"></i> High-Impact Projects</h2>
       <div class="projects-grid">
 
-        <!-- Project Block (Add or edit as you build new tools) -->
-        <div class="project-card">
-          <div class="project-title">
-            <span>Automated Testing Boilerplate</span>
-            <a href="https://github.com/yourusername" target="_blank" style="color: var(--text-muted);"><i
-                class="fa-brands fa-github"></i></a>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Automated DevOps Pipeline for QA Infrastructure</span>
+            <span class="card-date">GenKey B.V.</span>
           </div>
-          <p class="project-desc">A lightweight, highly extensible Playwright/TypeScript automation starter kit with
-            built-in Docker execution and HTML reporting configurations.</p>
-          <div class="skill-tags">
-            <span class="tag">TypeScript</span>
-            <span class="tag">Playwright</span>
-            <span class="tag">Docker</span>
-          </div>
+          <p class="project-challenge">
+            <strong>The Challenge:</strong> Manual deployment over VPN caused a major 40-minute-per-build bottleneck for test environment setups.
+          </p>
+          <ul class="card-details">
+            <li>Engineered custom Bash automation to execute build retrievals and deployments, dropping build-to-test times from <strong>40 minutes to under 2 minutes</strong>.</li>
+            <li>Automated database lifecycle workflows (backups, restores, environment resets) and Dropbox off-site archival to optimize VM storage.</li>
+            <li>Centralized control plane across test VMs using Ansible/Semaphore UI and deployed a full Docker-based observability stack (Grafana, Loki, Prometheus, Telegraf).</li>
+          </ul>
         </div>
 
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Scalable E2E Testing Suite & Ephemeral Environments</span>
+            <span class="card-date">Playwright / Java</span>
+          </div>
+          <ul class="card-details">
+            <li>Engineered an automated web testing suite using Playwright, Vaadin TestBench, and Java.</li>
+            <li>Leveraged <strong>Testcontainers</strong> to instantiate ephemeral database instances, eliminating test flakiness caused by shared environments.</li>
+            <li>Fully integrated with GitHub Actions CI quality gates and synced execution data in real-time with TestRail via REST API.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Remote Windows Desktop & Android Automation Framework</span>
+            <span class="card-date">Appium / PowerShell</span>
+          </div>
+          <ul class="card-details">
+            <li>Created a custom automation agent using Appium, PowerShell, and WinAPI to control remote Windows desktop nodes.</li>
+            <li>Implemented an SSH command-and-control layer bridging CI/CD pipelines directly with physical desktop hardware.</li>
+            <li>Built an Appium/UiAutomator2 automation framework for Android mobile application testing.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section id="experience">
+      <h2><i class="fa-solid fa-briefcase"></i> Work History</h2>
+      <div class="timeline">
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <span class="card-title">Lead QA Automation Engineer, DevOps & Tech Support</span><br>
+              <span class="card-subtitle">GenKey B.V.</span>
+            </div>
+            <span class="card-date">Jul 2024 — Present</span>
+          </div>
+          <ul class="card-details">
+            <li>Architected end-to-end automated testing strategies, scripts, and deployment pipelines across functional, non-functional, and edge-case suites.</li>
+            <li>Delivered specialized field support in the Commonwealth of Dominica for IXLA ID3 laser printers with Windows Embedded and SAMLight software.</li>
+            <li>Managed Linux server environments, mentored junior QA engineers, and led continuous QA process improvement initiatives.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <span class="card-title">Software Engineer (Freelance)</span><br>
+              <span class="card-subtitle">Inside Edge Consulting Limited</span>
+            </div>
+            <span class="card-date">Jan 2024 — Jun 2024</span>
+          </div>
+          <ul class="card-details">
+            <li>Served as principal software architect designing full-stack web solutions (React, FastAPI, MongoDB) deployed to Google Cloud Run via Docker.</li>
+            <li>Directed database administration, API technical documentation, automated testing, and supervised User Acceptance Testing (UAT).</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <span class="card-title">QA Automation Engineer</span><br>
+              <span class="card-subtitle">Zenithcrest Technologies (Client: FCMB)</span>
+            </div>
+            <span class="card-date">Dec 2021 — Jun 2024</span>
+          </div>
+          <ul class="card-details">
+            <li>Executed automated and performance testing for backend microservices, web apps, and mobile apps using Selenium, Appium, JMeter, and Postman.</li>
+            <li>Collaborated with 12+ agile engineering teams to ensure defect-free product releases for First City Monument Bank.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <span class="card-title">Microsoft Support Engineer - SharePoint & OneDrive</span><br>
+              <span class="card-subtitle">TekKnowledge</span>
+            </div>
+            <span class="card-date">Sep 2022 — Nov 2022</span>
+          </div>
+          <ul class="card-details">
+            <li>Diagnosed complex enterprise sync, permission, and site configuration issues for SharePoint Online and OneDrive for Business.</li>
+            <li>Analyzed logs, reproduced client defects, and collaborated with core Microsoft engineering to verify software patches.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <span class="card-title">National Service - IT Instructor</span><br>
+              <span class="card-subtitle">Nigerian Army School of Public Relations and Information</span>
+            </div>
+            <span class="card-date">May 2021 — May 2022</span>
+          </div>
+          <ul class="card-details">
+            <li>Taught technical workflows, computer literacy, and internet security curricula to military officers.</li>
+            <li>Maintained hardware systems and computer lab network configurations to ensure 100% operational uptime.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <span class="card-title">Game Developer (Contract)</span><br>
+              <span class="card-subtitle">KnackIt Corp</span>
+            </div>
+            <span class="card-date">Oct 2020 — Jun 2021</span>
+          </div>
+          <ul class="card-details">
+            <li>Designed architecture and developed 10 original levels for a 2D game using C# and Unity.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+      <div class="card">
+        <div class="edu-item">
+          <div>
+            <strong style="font-size: 1.05rem;">B.Sc. Computer Science</strong><br>
+            <span style="color: var(--text-muted);">Ashesi University</span>
+          </div>
+          <span class="card-date">Sep 2015 — Jun 2019</span>
+        </div>
       </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <p>©
-        <script>document.write(new Date().getFullYear())</script> • Built for performance & hosted on GitHub Pages.
-      </p>
+      <p>© <script>document.write(new Date().getFullYear())</script> Oluwatobi Adelaja • Hosted on GitHub Pages</p>
     </footer>
 
   </div>
 
 </body>
-
 </html>
