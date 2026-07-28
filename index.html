@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automation & Test Engineer | Portfolio</title>
+  <meta name="description"
+    content="Personal website & portfolio of an Automation Engineer, specializing in test architecture, CI/CD, and quality engineering.">
+
+  <!-- Modern Font & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-surface: #1e293b;
+      --border: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.15);
+      --font-body: 'Inter', -apple-system, sans-serif;
+      --font-code: 'Fira Code', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Header & Bio */
+    header {
+      margin-bottom: 3.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: var(--accent-glow);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .bio {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 680px;
+    }
+
+    /* Social Links */
+    .links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      background: var(--bg-surface);
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid var(--border);
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-main);
+    }
+
+    h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+      margin-left: 0.5rem;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      border-radius: 8px;
+    }
+
+    .skill-card h3 {
+      font-size: 1rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      font-family: var(--font-code);
+      font-size: 0.8rem;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      color: var(--text-muted);
+    }
+
+    /* Experience Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .experience-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .exp-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .exp-company {
+      color: var(--accent);
+    }
+
+    .exp-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-family: var(--font-code);
+    }
+
+    .exp-details {
+      list-style-type: disc;
+      padding-left: 1.2rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .exp-details li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 8px;
+      transition: border-color 0.2s ease;
+    }
+
+    .project-card:hover {
+      border-color: var(--accent);
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 0 0.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Hero / Intro -->
+    <header>
+      <span class="badge"><i class="fa-solid fa-code-branch"></i> Open to Opportunities</span>
+      <h1>Your Name</h1>
+      <p class="tagline">Lead QA Automation Engineer & Quality Architect</p>
+      <p class="bio">
+        Specializing in building robust end-to-end testing frameworks, CI/CD integrations, and automated infrastructure
+        for web, mobile, and API platforms. Passionate about scalable test architecture and developer efficiency.
+      </p>
+
+      <div class="links">
+        <a href="https://github.com/yourusername" class="btn" target="_blank"><i class="fa-brands fa-github"></i>
+          GitHub</a>
+        <a href="https://linkedin.com/in/yourusername" class="btn" target="_blank"><i class="fa-brands fa-linkedin"></i>
+          LinkedIn</a>
+        <a href="mailto:your.email@example.com" class="btn"><i class="fa-solid fa-envelope"></i> Email</a>
+        <a href="#" class="btn"><i class="fa-solid fa-file-pdf"></i> Resume</a>
+      </div>
+    </header>
+
+    <!-- Core Toolkit -->
+    <section id="skills">
+      <h2><i class="fa-solid fa-terminal"></i> Technical Toolkit</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <h3>E2E & Web Automation</h3>
+          <div class="skill-tags">
+            <span class="tag">Playwright</span>
+            <span class="tag">Selenium</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Java</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Mobile & API</h3>
+          <div class="skill-tags">
+            <span class="tag">Appium</span>
+            <span class="tag">REST Assured</span>
+            <span class="tag">Postman</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>DevOps & Infrastructure</h3>
+          <div class="skill-tags">
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Bash</span>
+            <span class="tag">CI/CD Pipelines</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Career Journey -->
+    <section id="experience">
+      <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+      <div class="timeline">
+
+        <!-- Role Item (Duplicate this block for new roles) -->
+        <div class="experience-item">
+          <div class="exp-header">
+            <div>
+              <span class="exp-title">Lead QA Automation Engineer</span>
+              <span class="exp-company">@ Current Company</span>
+            </div>
+            <span class="exp-date">2024 — Present</span>
+          </div>
+          <ul class="exp-details">
+            <li>Designed and maintained scalable cross-platform automated test suites.</li>
+            <li>Integrated parallelized test runs into GitHub Actions pipelines, reducing build times significantly.
+            </li>
+            <li>Mentored incoming engineering talent and led QA automation onboarding initiatives.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-header">
+            <div>
+              <span class="exp-title">QA Automation Engineer</span>
+              <span class="exp-company">@ Previous Company</span>
+            </div>
+            <span class="exp-date">2022 — 2024</span>
+          </div>
+          <ul class="exp-details">
+            <li>Built core API and UI testing suites for enterprise web services.</li>
+            <li>Collaborated with product teams to embed automated testing into daily deployment cycles.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Featured Projects & Frameworks -->
+    <section id="projects">
+      <h2><i class="fa-solid fa-cube"></i> Featured Projects</h2>
+      <div class="projects-grid">
+
+        <!-- Project Block (Add or edit as you build new tools) -->
+        <div class="project-card">
+          <div class="project-title">
+            <span>Automated Testing Boilerplate</span>
+            <a href="https://github.com/yourusername" target="_blank" style="color: var(--text-muted);"><i
+                class="fa-brands fa-github"></i></a>
+          </div>
+          <p class="project-desc">A lightweight, highly extensible Playwright/TypeScript automation starter kit with
+            built-in Docker execution and HTML reporting configurations.</p>
+          <div class="skill-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Playwright</span>
+            <span class="tag">Docker</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>©
+        <script>document.write(new Date().getFullYear())</script> • Built for performance & hosted on GitHub Pages.
+      </p>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
